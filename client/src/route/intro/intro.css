@@ -1,0 +1,63 @@
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+@keyframes humanKF {
+    from {top: 130px;
+        opacity: 0.2;}
+    to {top: 210px;
+    opacity: 1;}
+}
+@keyframes activityKF {
+    from {top: 220px;
+    opacity: 0.2;}
+    to {top: 350px;
+    opacity: 1;}
+}
+div.human {
+  font-family: 'SF Regular';
+  position: absolute;
+  font-size: 100px;
+  color: white;
+  top: 210px;
+  animation-name: humanKF;
+  animation-duration: 3s;
+  left:40%;
+}
+div.activity {
+  font-family: 'Helvetica Neue UltraLight';
+  position: absolute;
+  font-size: 100px;
+  color: white;
+  top: 350px;
+  animation-name: activityKF;
+  animation-duration: 3s;
+  left: 40%;
+}
+div.simple{
+  font-family: 'Helvetica Neue UltraLight';
+  position: absolute;
+  font-size: 60px;
+  color: gray;
+  top: 1600px;
+  text-align: center;
+  left: 15%;
+}
+@font-face {
+    font-family: 'Helvetica Neue UltraLight';
+    src: url(../../fonts/HelveticaNeue-UltraLight.otf);
+}
+@font-face {
+    font-family: 'SF Regular';
+    src: url(../../fonts/SFCompactDisplay-Regular.otf);
+}
+#set-height {
+  display: block;
+  height: 13500px;
+}
+.denseImg{
+  left:15%;
+  top: 1750px;
+  position: absolute;
+}

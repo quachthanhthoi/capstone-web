@@ -1,0 +1,88 @@
+#v0 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.overthreshold {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+
+p font-family helvetica {
+  font-size: 24px;
+}
+#time {
+  position: fixed;
+  display: block;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+  background-color: rgba(0,0,255,0.5);
+}
+#scroll {
+  position: fixed;
+  display: block;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+  background-color: rgba(255,0,0,0.5);
+}
+@keyframes humanKF {
+    from {top: 130px;
+        opacity: 0.2;}
+    to {top: 210px;
+    opacity: 1;}
+}
+@keyframes activityKF {
+    from {top: 220px;
+    opacity: 0.2;}
+    to {top: 350px;
+    opacity: 1;}
+}
+div.human {
+  font-family: 'SF Regular';
+  position: absolute;
+  font-size: 100px;
+  color: white;
+  top: 210px;
+  animation-name: humanKF;
+  animation-duration: 3s;
+  left:40%;
+}
+div.activity {
+  font-family: 'Helvetica Neue UltraLight';
+  position: absolute;
+  font-size: 100px;
+  color: white;
+  top: 350px;
+  animation-name: activityKF;
+  animation-duration: 3s;
+  left: 40%;
+}
+div.simple{
+  font-family: 'Helvetica Neue UltraLight';
+  position: absolute;
+  font-size: 60px;
+  color: gray;
+  top: 1600px;
+  text-align: center;
+}
+@font-face {
+    font-family: 'Helvetica Neue UltraLight';
+    src: url(../fonts/HelveticaNeue-UltraLight.otf);
+}
+@font-face {
+    font-family: 'SF Regular';
+    src: url(../fonts/SFCompactDisplay-Regular.otf);
+}
