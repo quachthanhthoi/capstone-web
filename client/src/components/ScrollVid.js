@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import "./scrollVid.css";
 import humanActVid from "../images/human-action.mov";
+import humanActVid2 from "../images/human-action-H246.mp4";
 
 export class ScrollVid extends Component {
   constructor(props) {
@@ -11,9 +12,11 @@ export class ScrollVid extends Component {
     // This binding is necessary to make `this` work in the callback
     // this.contr = this.contr.bind(this);
   }
-  componentDidMount = () => {
+
+  componentDidMount(){
     this.handlescroll();
-  };
+  }
+
   handlescroll = () => {
     var vid = document.getElementById("v0");
     var windowheight = window.innerHeight - 20;
@@ -30,21 +33,18 @@ export class ScrollVid extends Component {
       console.log(targetscrollpos);
     };
 
-    setInterval(function() {
+    setInterval(() => {
       scrollpos += (targetscrollpos - scrollpos) * accelamount;
-      if (targetscrollpos > 1.5) {
-        vid.style.position = "absolute";
-        vid.style.top = "600px";
-        //this.setState({ over: true });
-      } else {
-        vid.style.position = "fixed";
-        vid.style.top = "0px";
-        //this.setState({ over: false });
+      if (targetscrollpos > 1.5 && this.state.over==false) {
+        this.setState({ over: true });
+      } else if (targetscrollpos < 1.5 && this.state.over!=false) {
+        this.setState({ over: false });
       }
       vid.currentTime = scrollpos;
       vid.pause();
     }, 10);
   };
+
 
   render() {
     let className = this.state.over ? "overthreshold" : "underthreshold";
@@ -52,7 +52,6 @@ export class ScrollVid extends Component {
       <div>
         <video
           id="v0"
-          handlescroll={this.handlescroll}
           className={className}
           tabindex="0"
           autobuffer="autobuffer"
@@ -64,9 +63,8 @@ export class ScrollVid extends Component {
           />
         </video>
 
-          <div className="human">Human</div>
-          <div className="activity">Activity Recognition</div>
-        
+        <div className="human">Human</div>
+        <div className="activity">Activity Recognition</div>
       </div>
     );
   }

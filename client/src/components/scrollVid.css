@@ -1,16 +1,22 @@
-#v0 {
+/* #v0 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+} */
+.underthreshold {
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
 }
-
 .overthreshold {
   position: absolute;
-  top: 0;
+  top: 600px;
   left: 0;
   height: 100%;
 }
+
 
 
 p font-family helvetica {

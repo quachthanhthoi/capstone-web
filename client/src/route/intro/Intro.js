@@ -10,7 +10,7 @@ import { ScrollVid } from "../../components/ScrollVid";
 export class Intro extends Component {
   componentDidMount() {
     AOS.init({
-      duration: 2000
+      duration: 1500
     });
   }
   render() {
@@ -21,7 +21,7 @@ export class Intro extends Component {
         <div className="simple" data-aos="fade-up">
           The algorithm of tracking dense trajectories
         </div>
-        <img className="denseImg" src={Dense2} alt="" data-aos="zoom-out"/>
+        <img className="denseImg" src={Dense2} alt="" />
 
         <div id="set-height" />
       </div>
